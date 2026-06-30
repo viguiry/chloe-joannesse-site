@@ -3,9 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chlo&eacute; Joannesse propose des soins &eacute;nerg&eacute;tiques et du magn&eacute;tisme &agrave; domicile autour de Lorient pour les tensions nerveuses, cervicales et tendinites.">
+  <meta name="description" content="Chlo&eacute; Joannesse propose des soins &eacute;nerg&eacute;tiques et du magn&eacute;tisme &agrave; domicile autour de Lorient pour accompagner les tensions, les cervicales, les tendinites et le confort li&eacute; aux trajets nerveux.">
   <link rel="canonical" href="https://chloejoannesse.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Chlo&eacute; Joannesse | Magn&eacute;tisme &amp; soins &eacute;nerg&eacute;tiques">
+  <meta property="og:description" content="Soins &eacute;nerg&eacute;tiques et magn&eacute;tisme &agrave; domicile autour de Lorient.">
+  <meta property="og:url" content="https://chloejoannesse.com/">
   <title>Chlo&eacute; Joannesse | Magn&eacute;tisme &amp; soins &eacute;nerg&eacute;tiques &agrave; Lorient</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Chloe Joannesse",
+      "url": "https://chloejoannesse.com/",
+      "email": "chloejoannesse@icloud.com",
+      "telephone": "+33762286288",
+      "areaServed": {
+        "@type": "City",
+        "name": "Lorient"
+      },
+      "description": "Soins energetiques et magnetisme a domicile autour de Lorient.",
+      "sameAs": []
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Les soins remplacent-ils un suivi medical ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Les soins energetiques proposes par Chloe Joannesse s'inscrivent dans une demarche de bien-etre et ne remplacent pas un avis, un diagnostic ou un traitement medical."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ou ont lieu les rendez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les rendez-vous se font a domicile autour de Lorient, selon les disponibilites et la zone d'intervention confirmee au moment de la prise de contact."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment prendre rendez-vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Vous pouvez contacter Chloe Joannesse par email a chloejoannesse@icloud.com ou par telephone au 07 62 28 62 88."
+          }
+        }
+      ]
+    }
+  </script>
   <style>
     :root {
       --sand: #fde5bd;
@@ -297,6 +350,68 @@
       line-height: 1.6;
     }
 
+    .trust-list,
+    .session-list,
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .trust-list {
+      margin-top: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .trust-list li,
+    .session-list li,
+    .faq-item,
+    .info-box {
+      border: 1px solid var(--line);
+      background: rgba(255, 247, 234, 0.76);
+    }
+
+    .trust-list li {
+      padding: 16px;
+      color: var(--soft-ink);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .trust-list strong,
+    .session-list strong,
+    .info-box strong,
+    .faq-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-family: "Baskerville", "Didot", "Times New Roman", serif;
+      font-size: 23px;
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    .session-list li,
+    .faq-item,
+    .info-box {
+      padding: 20px;
+      color: var(--soft-ink);
+      font-size: 16px;
+      line-height: 1.58;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .info-box {
+      min-height: 132px;
+    }
+
     .contact {
       background: var(--ink);
       color: var(--cream);
@@ -398,6 +513,11 @@
       .reason-grid {
         grid-template-columns: 1fr;
       }
+
+      .trust-list,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 520px) {
@@ -435,6 +555,21 @@
         font-size: 38px;
       }
 
+      .logo-panel {
+        min-height: 226px;
+        aspect-ratio: auto;
+      }
+
+      .logo-card {
+        min-height: 226px;
+      }
+
+      .monogram {
+        font-size: 178px;
+        letter-spacing: -0.14em;
+        transform: translate(-12px, -3px);
+      }
+
       .actions {
         display: grid;
       }
@@ -463,6 +598,7 @@
       <div class="brand">Chlo&eacute; Joannesse</div>
       <div class="nav-links">
         <a href="#soins">Soins</a>
+        <a href="#seance">S&eacute;ance</a>
         <a href="#quand">Quand</a>
         <a href="#apropos">&Agrave; propos</a>
         <a href="#contact">Contact</a>
@@ -473,9 +609,9 @@
       <section class="hero">
         <div>
           <h1><span>Magn&eacute;tisme</span><span>&amp; soins</span><span>&eacute;nerg&eacute;tiques</span></h1>
-          <p class="subtitle">Un accompagnement &agrave; domicile autour de Lorient pour d&eacute;contracter le corps, lib&eacute;rer les tensions li&eacute;es aux nerfs et soutenir le confort au quotidien.</p>
+          <p class="subtitle">Un accompagnement bien-&ecirc;tre &agrave; domicile autour de Lorient pour rel&acirc;cher les tensions, apaiser le corps et retrouver du confort au quotidien.</p>
           <div class="actions">
-            <a class="button" href="mailto:chloejoannesse@icloud.com">Envoyer un email</a>
+            <a class="button" href="mailto:chloejoannesse@icloud.com?subject=Demande%20de%20rendez-vous">Prendre rendez-vous</a>
             <a class="button secondary" href="tel:+33762286288">Appeler</a>
           </div>
         </div>
@@ -490,30 +626,49 @@
 
       <section class="section" id="soins">
         <div class="section-inner">
-          <h2>D&eacute;tendre, lib&eacute;rer, soulager.</h2>
+          <h2>D&eacute;tendre, lib&eacute;rer, apaiser.</h2>
           <div>
-            <p class="copy">Chlo&eacute; Joannesse propose des soins &eacute;nerg&eacute;tiques et du magn&eacute;tisme &agrave; domicile, avec une attention particuli&egrave;re aux tensions nerveuses, aux tendinites, aux cervicales et aux inconforts qui touchent le trajet des nerfs.</p>
+            <p class="copy">Chlo&eacute; Joannesse propose des soins &eacute;nerg&eacute;tiques et du magn&eacute;tisme &agrave; domicile, avec une attention particuli&egrave;re aux tensions nerveuses, aux cervicales, aux tendinites et aux inconforts ressentis sur les trajets nerveux.</p>
             <div class="services" aria-label="Services propos&eacute;s">
               <div class="service">
                 <strong>Tensions nerveuses</strong>
-                <span>D&eacute;contraction</span>
+                <span>Rel&acirc;chement</span>
               </div>
               <div class="service">
                 <strong>Tendinites</strong>
-                <span>Apaisement</span>
+                <span>Confort</span>
               </div>
               <div class="service">
                 <strong>Cervicales</strong>
-                <span>Lib&eacute;ration</span>
+                <span>D&eacute;tente</span>
               </div>
             </div>
+            <ul class="trust-list" aria-label="Points de rep&egrave;re">
+              <li><strong>&Eacute;coute</strong>Chaque soin commence par un temps d'&eacute;change sur vos ressentis et vos besoins.</li>
+              <li><strong>Douceur</strong>L'accompagnement reste progressif, adapt&eacute; &agrave; votre rythme et &agrave; votre confort.</li>
+              <li><strong>Cadre clair</strong>Le soin s'inscrit dans une d&eacute;marche de bien-&ecirc;tre et ne remplace pas un suivi m&eacute;dical.</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section class="section alt" id="quand">
+      <section class="section alt" id="seance">
         <div class="section-inner">
-          <h2>Quand prendre rendez-vous&nbsp;?</h2>
+          <h2>Comment se passe une s&eacute;ance&nbsp;?</h2>
+          <div>
+            <ul class="session-list" aria-label="D&eacute;roulement d'une s&eacute;ance">
+              <li><strong>1. &Eacute;change</strong>Vous expliquez ce qui vous g&ecirc;ne, les zones sensibles, vos attentes et le contexte du rendez-vous.</li>
+              <li><strong>2. Soin</strong>Chlo&eacute; travaille avec une pr&eacute;sence calme, en magn&eacute;tisme et soins &eacute;nerg&eacute;tiques, selon les zones qui demandent de l'attention.</li>
+              <li><strong>3. Retour</strong>Un court temps de retour permet de faire le point sur vos ressentis et de confirmer les prochaines &eacute;tapes si besoin.</li>
+            </ul>
+            <p class="note">En cas de douleur persistante, de sympt&ocirc;me important ou de doute, il est important de consulter un professionnel de sant&eacute;.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quand">
+        <div class="section-inner">
+          <h2>Quand prendre RDV&nbsp;?</h2>
           <div>
             <div class="reason-grid" aria-label="Motifs de consultation">
               <div class="reason">
@@ -522,7 +677,7 @@
               </div>
               <div class="reason">
                 <strong>Tendinites</strong>
-                <span>Pour accompagner les zones inflamm&eacute;es ou douloureuses avec une approche douce.</span>
+                <span>Pour accompagner les zones sensibles avec une approche douce et progressive.</span>
               </div>
               <div class="reason">
                 <strong>Cervicales</strong>
@@ -538,12 +693,44 @@
         </div>
       </section>
 
-      <section class="section" id="apropos">
+      <section class="section alt" id="apropos">
         <div class="section-inner">
           <h2>Une approche simple et attentive.</h2>
           <div>
             <p class="copy">Chlo&eacute; travaille avec une pr&eacute;sence calme, &agrave; l'&eacute;coute de ce que le corps exprime. Chaque soin est adapt&eacute; &agrave; la personne, &agrave; son rythme et &agrave; la zone qui demande de l'attention.</p>
             <p class="copy">Les rendez-vous se font &agrave; domicile autour de Lorient, sur demande, pour offrir un cadre familier et confortable.</p>
+            <div class="info-grid" aria-label="Informations pratiques">
+              <div class="info-box">
+                <strong>Zone</strong>
+                &Agrave; domicile autour de Lorient. La zone exacte est confirm&eacute;e au moment de la prise de rendez-vous.
+              </div>
+              <div class="info-box">
+                <strong>Dur&eacute;e &amp; tarif</strong>
+                Les informations pratiques sont confirm&eacute;es avant le rendez-vous, selon votre demande et le d&eacute;placement.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="section-inner">
+          <h2>Questions fr&eacute;quentes.</h2>
+          <div>
+            <div class="faq-list" aria-label="Questions fr&eacute;quentes">
+              <div class="faq-item">
+                <strong>Les soins remplacent-ils un avis m&eacute;dical&nbsp;?</strong>
+                Non. Les soins propos&eacute;s rel&egrave;vent du bien-&ecirc;tre et ne remplacent pas un diagnostic, un traitement ou un suivi m&eacute;dical.
+              </div>
+              <div class="faq-item">
+                <strong>Faut-il pr&eacute;parer quelque chose&nbsp;?</strong>
+                Pr&eacute;voyez simplement un endroit calme et confortable. Le reste est expliqu&eacute; au moment de la prise de contact.
+              </div>
+              <div class="faq-item">
+                <strong>Comment prendre rendez-vous&nbsp;?</strong>
+                Vous pouvez contacter Chlo&eacute; par email ou par t&eacute;l&eacute;phone. Elle vous confirmera la disponibilit&eacute;, la zone et les informations pratiques.
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -552,7 +739,7 @@
         <div class="section-inner">
           <div>
             <h2>Prendre contact.</h2>
-            <p class="copy">Pour toute demande ou prise de rendez-vous, contactez Chlo&eacute; directement par email ou par t&eacute;l&eacute;phone. Les soins se font &agrave; domicile autour de Lorient.</p>
+            <p class="copy">Pour une question ou une demande de rendez-vous, contactez Chlo&eacute; directement par email ou par t&eacute;l&eacute;phone. Les soins se font &agrave; domicile autour de Lorient.</p>
           </div>
           <div>
             <ul class="contact-list">
