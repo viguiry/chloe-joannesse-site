@@ -96,13 +96,31 @@
 
     .nav {
       width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-      padding: 24px 0;
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      z-index: 10;
+      margin: 0;
+      padding: 14px 18px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
       color: var(--soft-ink);
+      background: rgba(255, 247, 234, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.62);
+      box-shadow: 0 18px 44px rgba(62, 48, 34, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transform: translateX(-50%);
+      transition: transform 260ms ease, opacity 220ms ease, box-shadow 220ms ease;
+      will-change: transform;
+    }
+
+    .nav.nav-hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, calc(-100% - 24px));
     }
 
     .brand {
@@ -127,7 +145,7 @@
     .hero {
       width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 64px 0 88px;
+      padding: 132px 0 88px;
     }
 
     h1,
@@ -456,6 +474,17 @@
         margin-right: 14px;
       }
 
+      .nav {
+        left: 14px;
+        margin: 0;
+        padding: 12px 14px;
+        transform: none;
+      }
+
+      .nav.nav-hidden {
+        transform: translateY(calc(-100% - 24px));
+      }
+
       .nav-links {
         font-size: 11px;
       }
@@ -646,5 +675,31 @@
 
     <footer><span>Chlo&eacute; Joannesse</span><span>Soins &eacute;nerg&eacute;tiques</span><span>Magn&eacute;tisme</span></footer>
   </div>
+  <script>
+    (() => {
+      const nav = document.querySelector(".nav");
+      if (!nav) return;
+
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+
+      const updateNav = () => {
+        const currentScrollY = window.scrollY;
+        const scrollingDown = currentScrollY > lastScrollY;
+        const pastIntro = currentScrollY > 120;
+
+        nav.classList.toggle("nav-hidden", scrollingDown && pastIntro);
+        lastScrollY = Math.max(currentScrollY, 0);
+        ticking = false;
+      };
+
+      window.addEventListener("scroll", () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateNav);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
